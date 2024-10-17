@@ -1,0 +1,19 @@
+<% let pageId='home' ; %>
+    <% let path='./' ; %>
+        <% let meta=require('../data/site.json'); %>
+
+            <%- include(path + 'common/_head.ejs' , {pageId: pageId, meta: meta}) %>
+                <%- include(path + 'common/_header.ejs' , {pageId: pageId, meta: meta}) %>
+
+                    <div class="l-home">
+                        <main>
+                            <div class="l-container">
+                                <h2>トップページです<i class="fa-solid fa-sun"></i></h2>
+                                <div class="test">テスト</div>
+                                <div class="hoge"></div>
+                                <div class="foo"></div>
+                            </div>
+                        </main>
+                    </div>
+
+                    <%- include(path + 'common/_footer.ejs' , {pageId: pageId, meta: meta}) %>

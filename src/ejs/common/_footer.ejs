@@ -1,0 +1,27 @@
+<footer class="l-footer p-footer">
+    <div class="l-container p-footer__container">
+        <nav class="p-footer__nav p-footer-nav">
+            <ul class="p-footer-nav__items">
+                <% for (let page in meta.pages) { %>
+                    <li><a href="<%= meta.pages[page].slug %>">
+                            <%= meta.pages[page].title %>
+                        </a></li>
+                    <% } %>
+            </ul>
+        </nav>
+        <p class="p-footer__copyright">
+            &copy;&nbsp;2020&nbsp;-
+            <script type="text/javascript" language="JavaScript">
+                current = new Date();
+                document.write(current.getFullYear())
+            </script>
+            <%= meta.siteInfo.siteName %>
+        </p>
+    </div>
+</footer>
+
+<button class="l-button-to-top c-button-to-top js-button-to-top"></button>
+<script src="/js/bundle.js"></script>
+</body>
+
+</html>

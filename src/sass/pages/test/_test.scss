@@ -1,0 +1,11 @@
+@use "../../global/" as *;
+
+.test {
+    color: #00f;
+    font-size: rem(32);
+
+    @include mq('md') {
+        color: #f00;
+        font-size: rem(64);
+    }
+}

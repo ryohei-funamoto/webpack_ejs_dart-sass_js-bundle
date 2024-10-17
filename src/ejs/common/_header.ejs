@@ -1,0 +1,35 @@
+<header id="js-header" class="<%= (pageId === 'home') ? 'l-header p-header' : 'l-header p-header p-header--sub' %>">
+    <div class="l-container p-header__container">
+        <div class="p-header__inner">
+            <% if (pageId==='home' ) { %>
+                <h1 class="p-header__logo c-logo">
+                    <%= meta.siteInfo.siteName; %>
+                </h1>
+                <% } else { %>
+                    <p class="p-header__logo c-logo">
+                        <a href="<%= meta.pages.home.slug; %>">
+                            <%= meta.siteInfo.siteName; %>
+                        </a>
+                    </p>
+                    <% } %>
+
+                        <nav class="p-header__nav p-gnav">
+                            <ul class="p-gnav__items">
+                                <% for (let page in meta.pages) { %>
+                                    <% if (page===pageId) { %>
+                                        <li class="is-current">
+                                            <%= meta.pages[page].title %>
+                                        </li>
+                                        <% } else { %>
+                                            <li>
+                                                <a href="<%= meta.pages[page].slug %>">
+                                                    <%= meta.pages[page].title %>
+                                                </a>
+                                            </li>
+                                            <% } %>
+                                                <% } %>
+                            </ul>
+                        </nav>
+        </div>
+    </div>
+</header>

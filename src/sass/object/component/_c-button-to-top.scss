@@ -1,0 +1,26 @@
+@use "../../global/" as *;
+
+.c-button-to-top {
+    background-color: $color-black;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity $trs-duration, visibility $trs-duration;
+}
+
+.c-button-to-top.is-show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.c-button-to-top::before {
+    border-left: rem(2) solid $color-white;
+    border-top: rem(2) solid $color-white;
+    content: '';
+    display: block;
+    height: rem(20);
+    left: 50%;
+    position: absolute;
+    top: 42.5%;
+    transform: translateX(-50%) rotate(45deg);
+    width: rem(20);
+}

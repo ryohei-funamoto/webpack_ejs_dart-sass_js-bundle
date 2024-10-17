@@ -1,0 +1,34 @@
+{
+  "siteInfo": {
+    "siteName": "EJSのデモサイト",
+    "siteUrl": "サイトのドメイン"
+  },
+  "pages": {
+    "home": {
+      "name": "home",
+      "title": "ホーム",
+      "description": "トップページの説明",
+      "ogpImage": "https://ogp-image.com/img/logo.png",
+      "type": "website",
+      "slug": "/"
+    },
+    "blog": {
+      "name": "blog",
+      "title": "ブログ",
+      "description": "ブログページの説明",
+      "ogpImage": "https://ogp-image.com/img/logo.png",
+      "type": "article",
+      "slug": "/blog/",
+      "breadcrumb": [
+        {
+          "path": "/",
+          "label": "ホーム"
+        },
+        {
+          "path": "",
+          "label": "ブログ"
+        }
+      ]
+    }
+  }
+}

@@ -1,4 +1,4 @@
-# r-funamoto_webpack-dartsass-ejs
+# webpack-ejs-sass
 - これは静的サイト用DartSass,EJS対応のwebpackです。
 
 ## 出力コマンド

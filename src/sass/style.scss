@@ -1,5 +1,7 @@
-@use "./foundation";
-@use "./layout";
-@use "./object";
-@use "./pages";
-@use "./plugins";
+@use "./foundation/reset";
+@use "./foundation/base";
+@use "./foundation/form";
+@use "./layout/*";
+@use "./object/*";
+@use "./pages/*";
+@use "./plugins/*";

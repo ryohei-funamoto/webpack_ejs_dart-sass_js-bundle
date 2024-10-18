@@ -1,11 +1,11 @@
-# r-funamoto_webpack-dartsass-ejs
-- これは静的サイト用DartSass,EJS対応のwebpackです。
+# webpack-ejs-sass
+- こちらは静的サイト用EJS, DartSass対応のwebpackです。
 
 ## 出力コマンド
 1. `npm run dev` で開発用環境に適した形のファイルを出力します。
 - CSS非圧縮
 - JavaScriptバンドル
-- ソースマップ作成(CSS,JavaScript)
+- ソースマップ作成(CSS, JavaScript)
 2. `npm run prod` で本番用環境に適した形のファイルを出力します。
 - CSS圧縮
 - JavaScriptバンドル
@@ -13,7 +13,7 @@
 3. `npm run server` でローカルサーバーが立ち上がり、ブラウザが開きます。ファイルは開発用環境に適した形で出力されます。
 - CSS非圧縮
 - JavaScriptバンドル
-- ソースマップ作成(CSS,JavaScript)
+- ソースマップ作成(CSS, JavaScript)
 
 ## 手順
 - ダウンロード後、ターミナルを起動する。
@@ -36,12 +36,11 @@
 - pagesフォルダでは各ページ毎にフォルダを設け、各ページ固有のスタイルを管理します。
 - globalフォルダには変数・各種設定関係が格納されています。
 - globalフォルダに格納されている変数を使用する際は、`@use 'globalフォルダへの相対パス' as *;`の記述が必要です。
-- Globでファイルを一括読み込みすることが出来ませんので、各フォルダ内に`_index.scss`を用意して、`_index.scss`と同階層のファイルを`@use 'ファイル名';`で読み込んでください。
+- Globでファイルを一括読み込みすることが出来るので、各フォルダ内に`_index.scss`を用意する必要はございません。
 - distフォルダにCSSファイルとして出力させたいSassファイルは、src/js内のmain.jsからインポート文を使って読み込んでください。
 
 ## JavaScript
 - `main.js`で各JavaScriptファイルを読み込みます。ファイルを増やす際は`main.js`にファイル読み込みの記述を行ってください。
-- `sub.js`のように記述を行ってください。
 - sanitize.css, fontawesome, smoothscroll-polyfill, swiperをバンドル済みです。使わない場合はmain.jsの読み込み部分をコメントアウトしてください。
 
 ## EJS
@@ -52,7 +51,7 @@
 - サイトのメタ情報はsrc/data内の`site.json`で管理しています。
 - 各ページ用のファイルの冒頭で`site.json`を読み込んでください(書き方はsrc/ejs内の`index.ejs`または`blog/index.ejs`を参照してください)。
 - includeで読み込んだ共通パーツに対して、`site.json`の情報を格納した変数を渡してください(書き方はsrc/ejs内の`index.ejs`または`blog/index.ejs`を参照してください)。
-- コマンドの実行により出力されたHTMLファイルはコード整形されません。出力されたHTMLファイルをWordPress化したりする場合は、一度`Shift`+`Alt`+`F`(Windows)、`Shift`+`Option`+`F`(Mac)でコードを整形してください。
+- コマンドの実行により出力されたHTMLファイルはコード整形されません。
 
 ## 画像
 - 使用する画像はsrc/img内に格納します。

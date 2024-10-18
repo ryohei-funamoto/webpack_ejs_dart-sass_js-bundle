@@ -39,6 +39,7 @@
         "terser-webpack-plugin": "^5.3.6",
         "webpack": "^5.75.0",
         "webpack-cli": "^5.0.1",
+        "webpack-dart-sass-glob": "^0.1.0",
         "webpack-merge": "^5.8.0",
         "webpack-watched-glob-entries-plugin": "^2.2.6"
     },

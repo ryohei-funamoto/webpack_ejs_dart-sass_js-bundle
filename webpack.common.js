@@ -73,11 +73,11 @@ const htmlGlobPlugins = (entries) => {
 
 module.exports = () => ({
     // メインのJavaScriptファイル(エントリーポイント)
-    entry: './src/js/main.js',
+    entry: "./src/js/main.js",
     // ファイルの出力設定
     output: {
-        path: path.resolve(__dirname, 'dist'), // ファイルを出力する場所
-        filename: 'js/bundle.js', // 出力ファイル名
+        path: path.resolve(__dirname, "dist"), // ファイルを出力する場所
+        filename: "js/bundle.js", // 出力ファイル名
         clean: true, // ビルド時に不要ファイルを削除するかどうか
     },
     // 
@@ -93,17 +93,17 @@ module.exports = () => ({
         rules: [ // 各ローダーの設定
             {
                 test: /\.ejs$/i,
-                use: ['html-loader', 'template-ejs-loader'],
+                use: ["html-loader", "template-ejs-loader"],
             },
             {
                 test: /\.js$/, // ローダーの機能を使用するファイルを正規表現などで指定
                 exclude: /node_modules\/(?!(dom7|ssr-window|swiper)\/).*/, // IE対応 除外設定にSwiperを含めない
                 use: [ // 使用するローダーを指定
                     {
-                        loader: 'babel-loader', // 使用するローダー
+                        loader: "babel-loader", // 使用するローダー
                         options: { // 使用するローダーのオプション
                             presets: [ // 使用するローダーの初期設定
-                                '@babel/preset-env', // browserslistで設定したターゲットブラウザにおいてプログラムが動くよう配慮してくれる
+                                "@babel/preset-env", // browserslistで設定したターゲットブラウザにおいてプログラムが動くよう配慮してくれる
                             ],
                         }
                     },
@@ -116,7 +116,7 @@ module.exports = () => ({
                         loader: MiniCssExtractPlugin.loader, // CSSファイルを別個に出力する
                     },
                     {
-                        loader: 'css-loader', // CSSをCommonJS形式に変換してJavaScriptで扱えるようにする
+                        loader: "css-loader", // CSSをCommonJS形式に変換してJavaScriptで扱えるようにする
                         options: {
                             url: false, // CSSのurl()をCommonJS形式に変換するかどうか
                             sourceMap: enabledSourceMap, // ソースマップを有効化するかどうか
@@ -127,35 +127,38 @@ module.exports = () => ({
                         },
                     },
                     {
-                        loader: 'postcss-loader', // PostCSSでCSSを処理する
+                        loader: "postcss-loader", // PostCSSでCSSを処理する
                         options: {
                             sourceMap: enabledSourceMap,
                             postcssOptions: {
                                 plugins: [
-                                    require('autoprefixer')({ grid: true }), // ベンダープレフィックスを自動付与する
-                                    require('postcss-sort-media-queries')({ sort: 'mobile-first' }), // メディアクエリを並べ替えて1つにまとめる
-                                    require('css-declaration-sorter')({ order: 'alphabetical' }), // CSSプロパティをアルファベット順に並べ替える
+                                    require("autoprefixer")({ grid: true }), // ベンダープレフィックスを自動付与する
+                                    require("postcss-sort-media-queries")({ sort: "mobile-first" }), // メディアクエリを並べ替えて1つにまとめる
+                                    require("css-declaration-sorter")({ order: "alphabetical" }), // CSSプロパティをアルファベット順に並べ替える
                                 ],
                             },
                         },
                     },
                     {
-                        loader: 'sass-loader', // SassをCSSにコンパイルする
+                        loader: "sass-loader", // SassをCSSにコンパイルする
                         options: {
-                            implementation: require('sass'), // DartSassを使えるようにする
+                            implementation: require("sass"), // DartSassを使えるようにする
                             sourceMap: enabledSourceMap,
                         },
                     },
+                    {
+                        loader: "webpack-dart-sass-glob", // DartSassでフォルダ内のファイルをglobで読み込む
+                    }
                 ],
             },
             {
                 test: /node_modules\/(.+)\.css$/, // node_module内のcss
                 use: [
                     {
-                        loader: 'style-loader',
+                        loader: "style-loader",
                     },
                     {
-                        loader: 'css-loader',
+                        loader: "css-loader",
                         options: {
                             url: false,
                         },
@@ -165,7 +168,7 @@ module.exports = () => ({
             },
         ],
     },
-    target: ['web', 'es5'],
+    target: ["web", "es5"],
     // プラグインの設定
     plugins: [
         ...cssGlobPlugins(entriesSass), // スプレッド構文を使って、関数cssGlobPluginsの戻り値(配列)を展開
@@ -173,27 +176,27 @@ module.exports = () => ({
         new CopyPlugin({
             patterns: [
                 { // src/imgの画像をdist/imgにコピーする
-                    from: path.resolve(__dirname, 'src/img'),
-                    to: path.resolve(__dirname, 'dist/img'),
+                    from: path.resolve(__dirname, "src/img"),
+                    to: path.resolve(__dirname, "dist/img"),
                 },
                 { // src/public/cssのCSSファイルをdist/cssにコピーする
-                    from: path.resolve(__dirname, 'src/public/css'),
-                    to: path.resolve(__dirname, 'dist/css'),
+                    from: path.resolve(__dirname, "src/public/css"),
+                    to: path.resolve(__dirname, "dist/css"),
                 },
                 { // src/public/jsのJSファイルをdist/jsにコピーする
-                    from: path.resolve(__dirname, 'src/public/js'),
-                    to: path.resolve(__dirname, 'dist/js'),
+                    from: path.resolve(__dirname, "src/public/js"),
+                    to: path.resolve(__dirname, "dist/js"),
                 },
                 { // src/public/imgの画像をdist/imgにコピーする
-                    from: path.resolve(__dirname, 'src/public/img'),
-                    to: path.resolve(__dirname, 'dist/img'),
+                    from: path.resolve(__dirname, "src/public/img"),
+                    to: path.resolve(__dirname, "dist/img"),
                 },
             ],
         }),
         new ImageminPlugin({
             test: /\.(jpe?g|png|gif|svg)$/i,
             pngquant: {
-                quality: '70-85'
+                quality: "70-85"
             },
             gifsicle: {
                 interlaced: false,
@@ -210,13 +213,13 @@ module.exports = () => ({
             ],
         }),
         new webpack.ProvidePlugin({
-            $: 'jquery',
-            jQuery: 'jquery',
+            $: "jquery",
+            jQuery: "jquery",
         }),
         new BrowserSyncPlugin({
-            host: 'localhost',
+            host: "localhost",
             port: 3000,
-            server: { baseDir: ['dist'] },
+            server: { baseDir: ["dist"] },
         }),
     ],
     // node_modules を監視（watch）対象から除外

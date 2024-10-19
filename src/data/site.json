@@ -1,34 +1,34 @@
 {
-  "siteInfo": {
-    "siteName": "EJSのデモサイト",
-    "siteUrl": "サイトのドメイン"
-  },
-  "pages": {
-    "home": {
-      "name": "home",
-      "title": "ホーム",
-      "description": "トップページの説明",
-      "ogpImage": "https://ogp-image.com/img/logo.png",
-      "type": "website",
-      "slug": "/"
+    "siteInfo": {
+        "siteName": "EJSのデモサイト",
+        "siteUrl": "サイトのドメイン"
     },
-    "blog": {
-      "name": "blog",
-      "title": "ブログ",
-      "description": "ブログページの説明",
-      "ogpImage": "https://ogp-image.com/img/logo.png",
-      "type": "article",
-      "slug": "/blog/",
-      "breadcrumb": [
-        {
-          "path": "/",
-          "label": "ホーム"
+    "pages": {
+        "home": {
+            "name": "home",
+            "title": "ホーム",
+            "description": "トップページの説明",
+            "ogpImage": "https://ogp-image.com/img/logo.png",
+            "type": "website",
+            "slug": "/"
         },
-        {
-          "path": "",
-          "label": "ブログ"
+        "blog": {
+            "name": "blog",
+            "title": "ブログ",
+            "description": "ブログページの説明",
+            "ogpImage": "https://ogp-image.com/img/logo.png",
+            "type": "article",
+            "slug": "/blog/",
+            "breadcrumb": [
+                {
+                    "path": "/",
+                    "label": "ホーム"
+                },
+                {
+                    "path": "",
+                    "label": "ブログ"
+                }
+            ]
         }
-      ]
     }
-  }
 }

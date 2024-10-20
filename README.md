@@ -28,8 +28,8 @@
 - srcフォルダで追加したものはdistフォルダに吐き出されます。
 
 ## Nodeについて
-- Node.js: v16.14.0で動作を確認済み。
-- npm: v8.3.1で動作を確認済み。
+- Node.js: v20.16.0で動作を確認済み。
+- npm: v10.8.1で動作を確認済み。
 
 ## Sass
 - FLOCSS記法を想定しているため、foundation, layout, objectフォルダがあります。そしてobjectフォルダ内には、component, project, utilityフォルダがあります。

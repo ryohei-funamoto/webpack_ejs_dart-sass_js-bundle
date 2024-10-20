@@ -1,29 +1,30 @@
-<header id="js-header" class="<%= (pageId === 'home') ? 'l-header p-header' : 'l-header p-header p-header--sub' %>">
+<% let isHome = pageId === "home" %>
+<header id="js-header" class="<%= isHome ? "l-header p-header" : "l-header p-header p-header--sub" %>">
     <div class="l-container p-header__container">
         <div class="p-header__inner">
-            <% if (pageId==='home' ) { %>
+            <% if (pageId==="home" ) { %>
                 <h1 class="p-header__logo c-logo">
-                    <%= meta.siteInfo.siteName; %>
+                    <%= meta.global.title; %>
                 </h1>
                 <% } else { %>
                     <p class="p-header__logo c-logo">
-                        <a href="<%= meta.pages.home.slug; %>">
-                            <%= meta.siteInfo.siteName; %>
+                        <a href="<%= meta.local.home.slug; %>">
+                            <%= meta.global.title; %>
                         </a>
                     </p>
                     <% } %>
 
                         <nav class="p-header__nav p-gnav">
                             <ul class="p-gnav__items">
-                                <% for (let page in meta.pages) { %>
+                                <% for (let page in meta.local) { %>
                                     <% if (page===pageId) { %>
                                         <li class="is-current">
-                                            <%= meta.pages[page].title %>
+                                            <%= page.title %>
                                         </li>
                                         <% } else { %>
                                             <li>
-                                                <a href="<%= meta.pages[page].slug %>">
-                                                    <%= meta.pages[page].title %>
+                                                <a href="<%= page.slug %>">
+                                                    <%= page.title %>
                                                 </a>
                                             </li>
                                             <% } %>

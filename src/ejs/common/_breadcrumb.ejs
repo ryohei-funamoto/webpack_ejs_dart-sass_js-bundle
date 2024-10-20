@@ -1,6 +1,6 @@
 <div class="l-breadcrumb p-breadcrumb">
-    <% for (let i in meta.pages[pageId].breadcrumb) { %>
-        <% let path=meta.pages[pageId].breadcrumb[i].path; let label=meta.pages[pageId].breadcrumb[i].label; %>
+    <% for (let value of meta.local[pageId].breadcrumb) { %>
+        <% let path=value.path; let label=value.label; %>
             <% if (path==='' ) { %>
                 <span><span class="current-item">
                         <%= label %>

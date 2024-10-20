@@ -2,9 +2,9 @@
     <div class="l-container p-footer__container">
         <nav class="p-footer__nav p-footer-nav">
             <ul class="p-footer-nav__items">
-                <% for (let page in meta.pages) { %>
-                    <li><a href="<%= meta.pages[page].slug %>">
-                            <%= meta.pages[page].title %>
+                <% for (let page in meta.local) { %>
+                    <li><a href="<%= page.slug %>">
+                            <%= page.title %>
                         </a></li>
                     <% } %>
             </ul>
@@ -15,7 +15,7 @@
                 current = new Date();
                 document.write(current.getFullYear())
             </script>
-            <%= meta.siteInfo.siteName %>
+            <%= meta.global.title %>
         </p>
     </div>
 </footer>

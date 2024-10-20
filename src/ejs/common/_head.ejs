@@ -1,11 +1,11 @@
-<% let title=pageId==='home' ? meta.siteInfo.siteName : meta.pages[pageId].title + ' | ' + meta.siteInfo.siteName %>
-  <% let description=meta.pages[pageId].description %>
+<% let title=pageId==='home' ? meta.global.title : meta.local[pageId].title + ' | ' + meta.global.title %>
+  <% let description=meta.local[pageId].description %>
 
     <!DOCTYPE html>
     <html lang="ja">
 
     <head
-      prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# <%= meta.pages[pageId].type %>: http://ogp.me/ns/<%= meta.pages[pageId].type %>#">
+      prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# <%= meta.local[pageId].og_type %>: http://ogp.me/ns/<%= meta.local[pageId].og_type %>#">
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,12 +16,12 @@
       <!-- SEO -->
       <meta name="description" content="<%= description %>" />
       <!-- OGP -->
-      <meta property="og:url" content="<%= meta.siteInfo.siteUrl + meta.pages[pageId].slug %>" />
-      <meta property="og:type" content="<%= meta.pages[pageId].type %>" />
+      <meta property="og:url" content="<%= meta.global.site_url + meta.local[pageId].slug %>" />
+      <meta property="og:type" content="<%= meta.local[pageId].og_type %>" />
       <meta property="og:title" content="<%= title %>" />
       <meta property="og:description" content="<%= description %>" />
-      <meta property="og:site_name" content="<%= meta.siteInfo.siteName %>" />
-      <meta property="og:image" content="<%= meta.pages[pageId].ogpImage %>" />
+      <meta property="og:site_name" content="<%= meta.global.title %>" />
+      <meta property="og:image" content="<%= meta.local[pageId].og_image %>" />
       <meta name="twitter:card" content="カード種類" />
       <meta name="twitter:site" content="@ツイッターユーザー名" />
       <!-- タッチアイコン -->

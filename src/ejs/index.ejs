@@ -1,9 +1,9 @@
 <% let pageId='home' ; %>
-    <% let path='./' ; %>
+    <% let commonPath='./common/' ; %>
         <% let meta=require('../data/site.json'); %>
 
-            <%- include(path + 'common/_head.ejs' , {pageId: pageId, meta: meta}) %>
-                <%- include(path + 'common/_header.ejs' , {pageId: pageId, meta: meta}) %>
+            <%- include(`${commonPath}_head.ejs` , {pageId: pageId, meta: meta}) %>
+                <%- include(`${commonPath}_header.ejs` , {pageId: pageId, meta: meta}) %>
 
                     <div class="l-home">
                         <main>
@@ -16,4 +16,4 @@
                         </main>
                     </div>
 
-                    <%- include(path + 'common/_footer.ejs' , {pageId: pageId, meta: meta}) %>
+                    <%- include(`${commonPath}_footer.ejs` , {pageId: pageId, meta: meta}) %>

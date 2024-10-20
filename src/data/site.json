@@ -1,32 +1,59 @@
 {
-    "siteInfo": {
-        "siteName": "EJSのデモサイト",
-        "siteUrl": "サイトのドメイン"
+    "global": {
+        "title": "EJSのデモサイト",
+        "site_url": "サイトのドメイン"
     },
-    "pages": {
+    "local": {
         "home": {
-            "name": "home",
-            "title": "ホーム",
-            "description": "トップページの説明",
-            "ogpImage": "https://ogp-image.com/img/logo.png",
-            "type": "website",
-            "slug": "/"
+            "title": "home",
+            "slug": "/",
+            "description": "Home description",
+            "keywords": "Home keywords",
+            "og_url": "Home og_url",
+            "og_type": "website",
+            "og_title": "Home og_title",
+            "og_image": "Home og_image",
+            "og_description": "Home og_description"
         },
         "blog": {
-            "name": "blog",
-            "title": "ブログ",
-            "description": "ブログページの説明",
-            "ogpImage": "https://ogp-image.com/img/logo.png",
-            "type": "article",
+            "title": "blog",
             "slug": "/blog/",
+            "description": "Blog description",
+            "keywords": "Blog keywords",
+            "og_url": "Blog og_url",
+            "og_type": "article",
+            "og_title": "Blog og_title",
+            "og_image": "Blog og_image",
+            "og_description": "Blog og_description",
             "breadcrumb": [
                 {
                     "path": "/",
-                    "label": "ホーム"
+                    "label": "home"
                 },
                 {
                     "path": "",
-                    "label": "ブログ"
+                    "label": "blog"
+                }
+            ]
+        },
+        "contact": {
+            "title": "contact",
+            "slug": "/contact/",
+            "description": "Contact description",
+            "keywords": "Contact keywords",
+            "og_url": "Contact og_url",
+            "og_type": "article",
+            "og_title": "Contact og_title",
+            "og_image": "Contact og_image",
+            "og_description": "Contact og_description",
+            "breadcrumb": [
+                {
+                    "path": "/",
+                    "label": "home"
+                },
+                {
+                    "path": "",
+                    "label": "contact"
                 }
             ]
         }

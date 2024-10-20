@@ -1,4 +1,4 @@
-# webpack-ejs-sass
+# webpack-ejs-dartSass-jsBundle
 - こちらは静的サイト用EJS, DartSass対応のwebpackです。
 
 ## 出力コマンド

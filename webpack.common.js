@@ -120,10 +120,11 @@ module.exports = () => ({
                         options: {
                             url: false, // CSSのurl()をCommonJS形式に変換するかどうか
                             sourceMap: enabledSourceMap, // ソースマップを有効化するかどうか
-                            importLoaders: 2, // css-loader以前に使用するローダーの数を設定する
+                            importLoaders: 3, // css-loader以前に使用するローダーの数を設定する
                             // 0 => no loaders (default);
                             // 1 => postcss-loader;
                             // 2 => postcss-loader, sass-loader
+                            // 3 => postcss-loader, sass-loader, webpack-dart-sass-glob
                         },
                     },
                     {

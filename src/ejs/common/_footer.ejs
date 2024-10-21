@@ -2,11 +2,13 @@
     <div class="l-container p-footer__container">
         <nav class="p-footer__nav p-footer-nav">
             <ul class="p-footer-nav__items">
-                <% for (let page in meta.local) { %>
-                    <li><a href="<%= page.slug %>">
-                            <%= page.title %>
-                        </a></li>
-                    <% } %>
+                <% for (let key in meta.local) { %>
+                    <% if (key!=="home" ) { %>
+                        <li><a href="<%= meta.local[key].slug %>">
+                                <%= meta.local[key].title %>
+                            </a></li>
+                        <% } %>
+                            <% } %>
             </ul>
         </nav>
         <p class="p-footer__copyright">

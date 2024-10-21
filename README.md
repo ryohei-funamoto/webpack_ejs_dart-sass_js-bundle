@@ -51,7 +51,6 @@
 - サイトのメタ情報はsrc/data内の`site.json`で管理しています。
 - 各ページ用のファイルの冒頭で`site.json`を読み込んでください(書き方はsrc/ejs内の`index.ejs`または`blog/index.ejs`を参照してください)。
 - includeで読み込んだ共通パーツに対して、`site.json`の情報を格納した変数を渡してください(書き方はsrc/ejs内の`index.ejs`または`blog/index.ejs`を参照してください)。
-- コマンドの実行により出力されたHTMLファイルはコード整形されません。
 
 ## 画像
 - 使用する画像はsrc/img内に格納します。

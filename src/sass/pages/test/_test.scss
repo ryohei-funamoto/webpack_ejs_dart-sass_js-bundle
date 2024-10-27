@@ -4,7 +4,7 @@
     color: #00f;
     font-size: rem(32);
 
-    @include mq('md') {
+    @include mq("md") {
         color: #f00;
         font-size: rem(64);
     }

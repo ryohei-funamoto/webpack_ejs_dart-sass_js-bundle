@@ -1,5 +1,5 @@
 <% let isHome=pageId==="home" %>
-    <header id="js-header" class="<%= isHome ? " l-header p-header" : "l-header p-header p-header--sub" %>">
+    <header class="<%= isHome ? "l-header p-header js-header" : "l-header p-header p-header--sub js-header" %>">
         <div class="l-container p-header__container">
             <div class="p-header__inner">
                 <% if (isHome) { %>
@@ -14,17 +14,19 @@
                         </p>
                         <% } %>
 
-                            <nav class="p-header__nav p-gnav">
+                            <nav class="p-header__gnav p-gnav">
                                 <ul class="p-gnav__items">
                                     <% for (let key in meta.local) { %>
                                         <% if (key!=="home" ) { %>
                                             <% if (key===pageId) { %>
-                                                <li class="is-current">
-                                                    <%= meta.local[key].title; %>
+                                                <li class="p-gnav__item">
+                                                    <a href="<%= meta.local[key].slug; %>" class="p-gnav__link is-current">
+                                                        <%= meta.local[key].title; %>
+                                                    </a>
                                                 </li>
                                                 <% } else { %>
-                                                    <li>
-                                                        <a href="<%= meta.local[key].slug; %>">
+                                                    <li class="p-gnav__item">
+                                                        <a href="<%= meta.local[key].slug; %>" class="p-gnav__link">
                                                             <%= meta.local[key].title; %>
                                                         </a>
                                                     </li>

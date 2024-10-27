@@ -1,16 +1,32 @@
 export function hamburger() {
-    const hamburger = document.getElementById('js-hamburger');
-    const drawer = document.getElementById('js-drawer');
-    const overlay = document.getElementById('js-overlay');
+    const hamburger = document.querySelector(".js-hamburger");
+    const drawer = document.querySelector(".js-drawer");
+    const mediaQuery = window.matchMedia("(min-width: 768px)");
 
-    function menuToggle() {
-        const isExpanded = hamburger.getAttribute('aria-expanded') !== 'false';
-        const isHidden = drawer.getAttribute('aria-hidden') !== 'false';
-        hamburger.setAttribute('aria-expanded', !isExpanded);
-        drawer.setAttribute('aria-hidden', !isHidden);
-        overlay.classList.toggle('is-show');
+    const openBurger = function () {
+        hamburger.classList.add("is-open");
+        drawer.classList.add("is-open");
     };
 
-    hamburger.addEventListener('click', menuToggle);
-    overlay.addEventListener('click', () => hamburger.click());
+    const closeBurger = function () {
+        hamburger.classList.remove("is-open");
+        drawer.classList.remove("is-open");
+    };
+
+    const toggleBurger = function () {
+        if (hamburger.classList.contains("is-open")) {
+            closeBurger();
+        } else {
+            openBurger();
+        }
+    };
+
+    const handleMediaQuery = function (e) {
+        if (e.matches) closeBurger();
+    };
+
+    hamburger.addEventListener("click", toggleBurger);
+    mediaQuery.addEventListener("change", handleMediaQuery);
+
+    handleMediaQuery(mediaQuery);
 }

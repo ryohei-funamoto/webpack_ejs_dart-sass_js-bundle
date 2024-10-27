@@ -86,17 +86,12 @@ $yu-mincho: YuMincho,
 // ----------
 // font-weight
 // ----------
-$light: 300;
-$regular: 400;
-$medium: 500;
-$semi-bold: 600;
-$bold: 700;
-$extra-bold: 800;
-
-// ----------
-// opacity
-// ----------
-$opacity: 0.7;
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semi-bold: 600;
+$fw-bold: 700;
+$fw-extra-bold: 800;
 
 // --------------------
 // フォントの設定
@@ -104,7 +99,7 @@ $opacity: 0.7;
 $font-family-base: "";
 $font-family-sub: "";
 $font-size-base: 16px;
-$font-weight-base: $regular;
+$font-weight-base: $fw-regular;
 $line-height-base: 1.5;
 
 // ----------
@@ -125,7 +120,7 @@ $color-white: #FFFFFF !default;
 
 // 文字
 $color-text: #2B3033 !default;
-$color-text02: #8B90A0 !default;
+$color-text-sub: #8B90A0 !default;
 
 // 背景色
 $color-bg: #FFFFFF;
@@ -157,6 +152,11 @@ $header-height-pc: 100px;
 $header-height-sp: 75px;
 
 // ----------
+// opacity
+// ----------
+$opacity: 0.7;
+
+// ----------
 // transition
 // ----------
-$trs-duration: 0.5s;
+$duration: 0.5s;

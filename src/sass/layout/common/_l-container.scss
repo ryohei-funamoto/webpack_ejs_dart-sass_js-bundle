@@ -9,7 +9,7 @@
     padding: 0 rem(strip-unit($padding-sp));
     width: 100%;
 
-    @include mq('md') {
+    @include mq("md") {
         max-width: rem(strip-unit($l-container-pc) + strip-unit($padding-pc) * 2);
         padding: 0 rem(strip-unit($padding-pc));
     }
@@ -24,7 +24,7 @@
 //     padding: 0 rem(strip-unit($padding-pc));
 //     width: 100%;
 
-//     @include mq('md') {
+//     @include mq("md") {
 //         max-width: rem(strip-unit($l-container-sp) + strip-unit($padding-sp) * 2);
 //         padding: 0 rem(strip-unit($padding-sp));
 //     }

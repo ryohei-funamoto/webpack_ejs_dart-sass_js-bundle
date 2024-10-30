@@ -17,7 +17,7 @@
         },
         "blog": {
             "title": "blog",
-            "slug": "/blog/",
+            "slug": "/blog",
             "description": "Blog description",
             "keywords": "Blog keywords",
             "og_url": "Blog og_url",
@@ -38,7 +38,7 @@
         },
         "contact": {
             "title": "contact",
-            "slug": "/contact/",
+            "slug": "/contact",
             "description": "Contact description",
             "keywords": "Contact keywords",
             "og_url": "Contact og_url",

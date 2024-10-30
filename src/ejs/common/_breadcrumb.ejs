@@ -3,11 +3,11 @@
         <% let path=value.path; let label=value.label; %>
             <% if (path==='' ) { %>
                 <span><span class="current-item">
-                        <%= label %>
+                        <%= label; %>
                     </span></span>
                 <% } else { %>
-                    <span><a href="<%= path %>">
-                            <%= label %>
+                    <span><a href="<%= path; %>">
+                            <%= label; %>
                         </a></span>
                     &nbsp;&gt;&nbsp; <% } %>
                         <% } %>

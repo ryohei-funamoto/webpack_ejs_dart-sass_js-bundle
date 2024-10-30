@@ -1,0 +1,25 @@
+@use "../../global/" as *;
+
+.p-form {
+    & div:has(>.p-form__section) {
+        display: flex;
+        gap: rem(24);
+    }
+
+    & div>.p-form__section {
+        width: 50%;
+    }
+}
+
+.p-form__section {
+    margin: rem(24) 0 0;
+}
+
+.p-form__agreement {
+    margin: rem(24) 0 0;
+}
+
+.p-form__button {
+    margin: rem(24) 0 0;
+    text-align: center;
+}

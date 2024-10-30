@@ -21,28 +21,28 @@ $l-container-pc: 1000px;
 // ----------
 $breakpoints: (
     // モバイルファースト用
-    'xs': '(min-width: #{$l-xs})',
-    'sm': '(min-width: #{$l-sm})',
-    'md': '(min-width: #{$l-md})',
-    'lg': '(min-width: #{$l-lg})',
-    'xl': '(min-width: #{$l-xl})',
-    'xxl': '(min-width: #{l-xxl})',
-    'container': '(min-width: #{$l-container-pc})',
+    "xs": "(min-width: #{$l-xs})",
+    "sm": "(min-width: #{$l-sm})",
+    "md": "(min-width: #{$l-md})",
+    "lg": "(min-width: #{$l-lg})",
+    "xl": "(min-width: #{$l-xl})",
+    "xxl": "(min-width: #{l-xxl})",
+    "container": "(min-width: #{$l-container-pc})",
 
     // PCファースト用
-    // 'xxl': '(max-width: #{$l-xxl})',
-    // 'xl': '(max-width: #{$l-xl})',
-    // 'lg': '(max-width: #{$l-lg})',
-    // 'md': '(max-width: #{$l-md - 1})',
-    // 'sm': '(max-width: #{$l-sm})',
-    // 'xs': '(max-width: #{$l-xs})',
-    // 'container': '(max-width: #{$l-container-pc})',
+    // "xxl": "(max-width: #{$l-xxl})",
+    // "xl": "(max-width: #{$l-xl})",
+    // "lg": "(max-width: #{$l-lg})",
+    // "md": "(max-width: #{$l-md - 1})",
+    // "sm": "(max-width: #{$l-sm})",
+    // "xs": "(max-width: #{$l-xs})",
+    // "container": "(max-width: #{$l-container-pc})",
 
     // ホバー分岐用
-    'hover-sp': '(hover: none) and (pointer: coarse)',
-    'hover-tab': '(hover: none) and (pointer: fine)',
-    'hover-sp-tab': '(hover: none) and (any-pointer: coarse)',
-    'hover-pc': '(hover: hover) and (pointer: fine)',
+    "hover-sp": "(hover: none) and (pointer: coarse)",
+    "hover-tab": "(hover: none) and (pointer: fine)",
+    "hover-sp-tab": "(hover: none) and (any-pointer: coarse)",
+    "hover-pc": "(hover: hover) and (pointer: fine)",
     ) !default;
 
 // ----------
@@ -51,20 +51,20 @@ $breakpoints: (
 // https://saruwakakun.com/font-family
 // https://ics.media/entry/200317/
 // https://willcloud.jp/knowhow/font-family/
-$sans-serif: 'Lato',
+$sans-serif: "Lato",
     "Helvetica Neue",
     "Helvetica",
     "Arial",
-    'Noto Sans JP',
+    "Noto Sans JP",
     "Hiragino Kaku Gothic ProN",
     "Hiragino Sans",
     "Yu Gothic",
     "Meiryo",
     sans-serif;
 
-$serif: 'Noto Serif',
+$serif: "Noto Serif",
     "Times New Roman",
-    'Noto Serif JP',
+    "Noto Serif JP",
     "YuMincho",
     "Hiragino Mincho ProN",
     "Yu Mincho",
@@ -80,7 +80,7 @@ $yu-gothic: "游ゴシック体",
     sans-serif;
 
 $yu-mincho: YuMincho,
-    'Yu Mincho',
+    "Yu Mincho",
     serif;
 
 // ----------
@@ -105,30 +105,30 @@ $line-height-base: 1.5;
 // ----------
 // color
 // ----------
-$color-main: #00A1E9 !default;
+$color-main: #00a1e9 !default;
 $color-sub: #002241 !default;
-$color-accent: #EFA545 !default;
-$color-active: #2A96F8 !default;
+$color-accent: #efa545 !default;
+$color-active: #2a96f8 !default;
 
 // グレースケール
 $color-black: #000000 !default;
 $color-gray-800: #333333 !default;
 $color-gray-600: #666666 !default;
 $color-gray-400: #999999 !default;
-$color-gray-200: #CCCCCC !default;
-$color-white: #FFFFFF !default;
+$color-gray-200: #cccccc !default;
+$color-white: #ffffff !default;
 
 // 文字
-$color-text: #2B3033 !default;
-$color-text-sub: #8B90A0 !default;
+$color-text: #2b3033 !default;
+$color-text-sub: #8b90a0 !default;
 
 // 背景色
-$color-bg: #FFFFFF;
+$color-bg: #ffffff;
 
 // SNS
 $color-sns-facebook: #375B95 !default;
-$color-sns-twitter: #4BAEEA !default;
-$color-sns-line: #04BB00 !default;
+$color-sns-twitter: #4baeea !default;
+$color-sns-line: #04bb00 !default;
 
 // ----------
 // z-index
@@ -157,6 +157,6 @@ $header-height-sp: 75px;
 $opacity: 0.7;
 
 // ----------
-// transition
+// duration
 // ----------
-$duration: 0.5s;
+$duration: 0.3s;

@@ -4,13 +4,150 @@
             <%- include(`${commonPath}_head.ejs` , {pageId: pageId, meta: meta}) %>
                 <%- include(`${commonPath}_header.ejs` , {pageId: pageId, meta: meta}) %>
                     <div class="l-contact">
-                        <main>
-                            <div class="l-container">
-                                <%- include(`${commonPath}_breadcrumb.ejs` , {pageId: pageId, meta: meta}) %>
-                                    <h1>お問い合わせページです</h1>
-                                    <div class="test">テスト</div>
-                                    <div class="hoge"></div>
-                            </div>
-                        </main>
+                        <div class="l-container">
+                            <%- include(`${commonPath}_breadcrumb.ejs` , {pageId: pageId, meta: meta}) %>
+                                <h1>お問い合わせページです</h1>
+                                <form action="" class="p-form">
+                                    <div>
+                                        <div class="p-form__section p-input-section">
+                                            <p class="p-input-section__label p-input-section__label--required">
+                                                <label for="lastName">姓</label>
+                                            </p>
+                                            <p class="p-input-section__field">
+                                                <input type="text" id="lastName" name="lastName" placeholder="山田"
+                                                    autocomplete="family-name" required>
+                                            </p>
+                                        </div>
+                                        <div class="p-form__section p-input-section">
+                                            <p class="p-input-section__label p-input-section__label--required">
+                                                <label for="firstName">名</label>
+                                            </p>
+                                            <p class="p-input-section__field">
+                                                <input type="text" id="firstName" name="firstName" placeholder="太郎"
+                                                    autocomplete="given-name" required>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="p-form__section p-input-section">
+                                        <p class="p-input-section__label p-input-section__label--required">
+                                            <label for="email">メールアドレス</label>
+                                        </p>
+                                        <p class="p-input-section__field">
+                                            <input type="email" id="email" name="email" placeholder="info@example.com"
+                                                required>
+                                        </p>
+                                    </div>
+                                    <div class="p-form__section p-input-section">
+                                        <p class="p-input-section__label">
+                                            <label for="pet-select">好きな動物</label>
+                                        </p>
+                                        <div class="p-input-section__field">
+                                            <select name="pets" id="pet-select">
+                                                <option value="">--選択してください--</option>
+                                                <option value="dog">イヌ</option>
+                                                <option value="cat">ネコ</option>
+                                                <option value="hamster">ハムスター</option>
+                                                <option value="parrot">オウム</option>
+                                                <option value="spider">クモ</option>
+                                                <option value="goldfish">金魚</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="p-form__section p-input-section">
+                                        <fieldset>
+                                            <legend class="p-input-section__label">性別</legend>
+                                            <ul class="p-input-section__field">
+                                                <li>
+                                                    <label for="male">
+                                                        <input type="radio" name="gender" id="male" value="" checked />
+                                                        <span>男性</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label for="female">
+                                                        <input type="radio" name="gender" id="female" value="" />
+                                                        <span>女性</span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </fieldset>
+                                    </div>
+                                    <div class="p-form__section p-input-section">
+                                        <fieldset>
+                                            <legend class="p-input-section__label">話せる言語(複数選択可)</legend>
+                                            <ul class="p-input-section__field">
+                                                <li>
+                                                    <label for="english">
+                                                        <input type="checkbox" name="language[]" id="english"
+                                                            value="英語" />
+                                                        <span>英語</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label for="chinese">
+                                                        <input type="checkbox" name="language[]" id="chinese"
+                                                            value="中国語" />
+                                                        <span>中国語</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label for="japanese">
+                                                        <input type="checkbox" name="language[]" id="japanese"
+                                                            value="日本語" />
+                                                        <span>日本語</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label for="korean">
+                                                        <input type="checkbox" name="language[]" id="korean"
+                                                            value="韓国語" />
+                                                        <span>韓国語</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label for="spanish">
+                                                        <input type="checkbox" name="language[]" id="spanish"
+                                                            value="スペイン語" />
+                                                        <span>スペイン語</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label for="french">
+                                                        <input type="checkbox" name="language[]" id="french"
+                                                            value="フランス語" />
+                                                        <span>フランス語</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label for="german">
+                                                        <input type="checkbox" name="language[]" id="german"
+                                                            value="ドイツ語" />
+                                                        <span>ドイツ語</span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </fieldset>
+                                    </div>
+                                    <div class="p-form__section p-input-section">
+                                        <p class="p-input-section__label">
+                                            <label for="inquiryDetails">お問い合わせ内容</label>
+                                        </p>
+                                        <p class="p-input-section__field">
+                                            <textarea name="inquiryDetails" id="inquiryDetails"></textarea>
+                                        </p>
+                                    </div>
+                                    <div class="p-form__agreement p-input-section p-input-section--agreement">
+                                        <p>
+                                            <label for="agreement">
+                                                <input type="checkbox" name="agreement" id="agreement">
+                                                <span>利用規約に同意する</span>
+                                            </label>
+                                        </p>
+                                    </div>
+                                    <div class="p-form__button">
+                                        <button type="submit" class="c-button-submit">送信する</button>
+                                    </div>
+                                </form>
+                        </div>
                     </div>
                     <%- include(`${commonPath}_footer.ejs` , {pageId: pageId, meta: meta}) %>

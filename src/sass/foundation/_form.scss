@@ -20,8 +20,8 @@ textarea {
 }
 
 textarea {
-    display: block;
     /* 下にできる余白を消す */
+    display: block;
     height: rem(150);
     resize: vertical;
 }
@@ -35,7 +35,7 @@ textarea:focus {
 }
 
 // ----------
-// ラジオボタン
+// ラジオボタン・チェックボックス
 // ----------
 /* ラジオボタンの初期化 */
 input[type="radio"] {
@@ -44,9 +44,6 @@ input[type="radio"] {
     position: absolute;
 }
 
-// ----------
-// チェックボックス
-// ----------
 /* ラジオボタンの初期化 */
 input[type="checkbox"] {
     opacity: 0;
@@ -54,10 +51,16 @@ input[type="checkbox"] {
     position: absolute;
 }
 
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
 // ----------
-// セレクトボックス
+// ドロップダウンメニュー
 // ----------
-/* セレクトボックスの初期化 */
+/* ドロップダウンメニューの初期化 */
 select {
     appearance: none;
     background-color: transparent;
@@ -78,7 +81,7 @@ select::-ms-expand {
     display: none;
 }
 
-/* セレクトボックスにフォーカスが当たった時のスタイル */
+/* ドロップダウンメニューにフォーカスが当たった時のスタイル */
 select:focus {
     box-shadow: none;
     outline: none;
